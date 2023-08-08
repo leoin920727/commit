@@ -43,9 +43,10 @@ JSON.stringify() 把物件變成JSON字串
 multer.single("name")
 -----------------------------
 req.query 承接|裝載 URL問號後面的資料
-req.body  承接|裝載 網頁傳送方法為POST的屬性名稱與值
+req.body  承接|裝載 網頁傳送方法為POST的屬性名稱與值 搭配body-parser套件
 req.app.get()
-req.file 承接FLIE二進位資料
+req.file 承接FLIE二進位資料 搭配multer套件
+req.params.變數 取得URL資訊 搭配 :
 ------------------------------------------------------
 cd 資料夾名稱           => 切換資料夾
 dir                    => list清單
