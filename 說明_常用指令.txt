@@ -37,6 +37,9 @@ res.sendfile()
 res.json()
 app.set(key,value)
 app.get()
+app.use(路由物件)
+app.use(靜態檔案)
+app.use(自己寫的函式)
 app.set("view engine","ejs") 設定視圖引擎
 res.render() 設定頁面渲染
 JSON.stringify() 把物件變成JSON字串
