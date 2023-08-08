@@ -1,0 +1,65 @@
+1. 稍後會依照 「20_PDF」 資料夾底下的PDF檔案進行說明
+
+    ※ 這一份教材由資策會底下的講師在2020-2021年共同編撰
+
+    ※ 2021/09/01 資策會數位教育研究所轉變為iSpan資展國際正式成立
+
+
+2. 預計的操作方式：
+
+    ※ 建議在 C:\Lab 資料夾底下，根據當前討論的PDF檔案建立對應的資料夾
+       若討論 「Module_01_安裝Nodejs.pdf」
+       則建立 M01 或者 Module01 資料夾
+
+install 安裝 -> require 加入 -> 實際應用套件
+npm init -y
+npm install express
+npm install ejs
+npm install multer
+npm list -v           => 查詢套件版本
+npm list -s --depth=1
+-------------------------
+require('express')
+require('ejs')
+require('body-parser')
+require("querystring")
+require("multer")
+-------------------------
+express() 啟動伺服器
+express.Router()
+express.static() 伺服器提供靜態檔案[路徑|資料夾名稱] M05 p7
+---------------------------
+res.writeHead()
+res.write()
+res.end()
+res.send()
+res.sendfile()
+res.json()
+app.set(key,value)
+app.get()
+app.set("view engine","ejs") 設定視圖引擎
+res.render() 設定頁面渲染
+JSON.stringify() 把物件變成JSON字串
+multer.single("name")
+-----------------------------
+req.query 承接|裝載 URL問號後面的資料
+req.body  承接|裝載 網頁傳送方法為POST的屬性名稱與值
+req.app.get()
+req.file 承接FLIE二進位資料
+------------------------------------------------------
+cd 資料夾名稱           => 切換資料夾
+dir                    => list清單
+cls                    => 清除
+rm 檔案或資料夾名稱     => remove刪除 rm -rf
+call> 檔案名稱         => 新增檔案
+mkdir 資料夾名稱       => 新增資料夾
+cd                    => 顯示當前路徑
+node [路徑] 檔案名稱   => 執行檔案
+node star
+npm init              => 初始化專案資料夾 -f,-y 快速設定
+npm install 套件名稱   => 安裝專案套件npm i 套件名稱
+npm uninstall 套件名稱 => 移除套件 npm remove 套件名稱
+npm run 腳本名稱       => 執行腳本
+npm start 腳本名稱     => 執行腳本
+ctrl + C              => 終止伺服器服務
+nodemon -w            => 監控多個檔案
