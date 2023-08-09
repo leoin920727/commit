@@ -51,9 +51,15 @@ app.set("view engine","ejs") 設定視圖引擎
 res.render() 設定頁面渲染
 JSON.stringify() 把物件變成JSON字串
 multer.single("name")
-mysql.createConnection({登入設定})
-conn.connect(fn())
-conn.query("指令",fn())
+mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: "mask"
+})
+conn.connect()
+conn.query("指令",[變數代稱],fn())
+session  M11 p14.js
 -----------------------------
 req.query 承接|裝載 URL問號後面的資料
 req.body  承接|裝載 網頁傳送方法為POST的屬性名稱與值 搭配body-parser套件
