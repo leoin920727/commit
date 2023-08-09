@@ -16,6 +16,7 @@ npm init -y
 npm install express
 npm install ejs
 npm install multer
+npm install mysql
 npm list -v           => 查詢套件版本
 npm list -s --depth=1
 -------------------------
@@ -24,6 +25,8 @@ require('ejs')
 require('body-parser')
 require("querystring")
 require("multer")
+require("express-session")
+require("mysql")
 -------------------------
 express() 啟動伺服器
 express.Router()
@@ -35,15 +38,22 @@ res.end()
 res.send()
 res.sendfile()
 res.json()
+res.redirect(路由) 重新導向路由
 app.set(key,value)
 app.get()
-app.use(路由物件)
-app.use(靜態檔案)
+app.use(/路由,router)
+app.use(/路由,express.static(路徑))
+app.use(bodyparser.json())
+app.use(bodyparser.urlencode())
 app.use(自己寫的函式)
+app.use(session)
 app.set("view engine","ejs") 設定視圖引擎
 res.render() 設定頁面渲染
 JSON.stringify() 把物件變成JSON字串
 multer.single("name")
+mysql.createConnection({登入設定})
+conn.connect(fn())
+conn.query("指令",fn())
 -----------------------------
 req.query 承接|裝載 URL問號後面的資料
 req.body  承接|裝載 網頁傳送方法為POST的屬性名稱與值 搭配body-parser套件
