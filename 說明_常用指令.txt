@@ -83,3 +83,22 @@ npm run 腳本名稱       => 執行腳本
 npm start 腳本名稱     => 執行腳本
 ctrl + C              => 終止伺服器服務
 nodemon -w            => 監控多個檔案
+==========================================================
+.gitignore
+git config --global user.name
+git config --global user.email
+git init
+git status
+git add
+git commit -m
+git commit --amend
+git log
+git show
+git reset
+git branch (branchname)
+git checkout -b (branchname)
+git merge
+git remote add origin
+git push -u origin master
+git clone
+git diff
