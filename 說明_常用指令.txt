@@ -14,9 +14,11 @@
 install 安裝 -> require 加入 -> 實際應用套件
 npm init -y
 npm install express
-npm install ejs
-npm install multer
 npm install mysql
+npm install cors
+npm install ejs
+npm install bluebird
+npm install multer
 npm list -v           => 查詢套件版本
 npm list -s --depth=1
 -------------------------
@@ -27,6 +29,8 @@ require("querystring")
 require("multer")
 require("express-session")
 require("mysql")
+require('cors');
+require('bluebird');
 -------------------------
 express() 啟動伺服器
 express.Router()
@@ -47,6 +51,7 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencode())
 app.use(自己寫的函式)
 app.use(session)
+app.use(cors(origin: [指定想要開放的URL]))
 app.set("view engine","ejs") 設定視圖引擎
 res.render() 設定頁面渲染
 JSON.stringify() 把物件變成JSON字串
@@ -58,7 +63,7 @@ mysql.createConnection({
     database: "mask"
 })
 conn.connect()
-conn.query("指令",[變數代稱],fn())
+conn.query("SQL指令",[如果SQL包含?],fn())
 session  M11 p14.js
 -----------------------------
 req.query 承接|裝載 URL問號後面的資料
